@@ -1,19 +1,10 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted } from 'vue'
 import { storeToRefs } from 'pinia'
 import Sidebar from '@/components/Sidebar.vue'
 import { useAppStore } from '@/stores/app'
 
 const appStore = useAppStore()
 const { sidebarOpen } = storeToRefs(appStore)
-
-onMounted(() => {
-  // 移除了强制警告弹窗
-})
-
-onUnmounted(() => {
-  // 清理逻辑
-})
 </script>
 
 <template>
@@ -56,91 +47,6 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-/* 弹窗动画 */
-.modal-fade-enter-active {
-  animation: modal-in 0.4s ease-out;
-}
-
-.modal-fade-leave-active {
-  animation: modal-out 0.3s ease-in;
-}
-
-@keyframes modal-in {
-  0% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes modal-out {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-}
-
-/* 弹窗样式 */
-.warning-modal {
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-/* 水波纹背景 */
-.ripple-bg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.ripple {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(239, 68, 68, 0.1) 0%, transparent 70%);
-  animation: ripple-effect 4s ease-out infinite;
-}
-
-.ripple-1 {
-  width: 200px;
-  height: 200px;
-  animation-delay: 0s;
-}
-
-.ripple-2 {
-  width: 300px;
-  height: 300px;
-  animation-delay: 1.3s;
-}
-
-.ripple-3 {
-  width: 400px;
-  height: 400px;
-  animation-delay: 2.6s;
-}
-
 /* Slide Fade Transition */
 .slide-fade-enter-active,
 .slide-fade-leave-active {

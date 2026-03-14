@@ -1,0 +1,2 @@
+{"app":"qq-farm-bot","level":"info","message":"未发现账号，请访问管理面板添加账号","module":"runtime","tag":"系统","timestamp":"2026-03-14T07:04:00.313Z"}
+{"app":"qq-farm-bot","level":"info","message":"admin panel started","module":"admin","port":3000,"timestamp":"2026-03-14T07:04:00.314Z","url":"http://localhost:3000"}
